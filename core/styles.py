@@ -387,6 +387,32 @@ def apply_styles() -> None:
             background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.07));
         }
 
+        [data-testid="stSidebar"] .stDownloadButton > button {
+            min-height: 44px;
+            border-radius: 14px;
+            color: #FFFFFF !important;
+            background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05)) !important;
+            border: 1px solid rgba(226, 240, 251, 0.18) !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05) !important;
+        }
+
+        [data-testid="stSidebar"] .stDownloadButton > button:hover {
+            color: #FFFFFF !important;
+            border-color: rgba(240, 248, 255, 0.26) !important;
+            background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.07)) !important;
+        }
+
+        [data-testid="stSidebar"] .stButton > button:disabled,
+        [data-testid="stSidebar"] .stDownloadButton > button:disabled {
+            opacity: 1 !important;
+            color: rgba(255,255,255,0.72) !important;
+            -webkit-text-fill-color: rgba(255,255,255,0.72) !important;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+            border: 1px solid rgba(226, 240, 251, 0.14) !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.04) !important;
+            cursor: not-allowed !important;
+        }
+
         .stMultiSelect label,
         .stDateInput label,
         .stTextInput label,
