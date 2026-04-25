@@ -19,57 +19,52 @@ CAPTURE_ZOOM = 12
 MAP_THEME_CSS = """
 <style>
 .leaflet-container {
-    background: linear-gradient(180deg, #EAF1F9 0%, #F7FAFE 100%) !important;
-    font-family: "Segoe UI", "IBM Plex Sans", sans-serif;
-    border-radius: 18px !important;
+    background: #020617 !important;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 .leaflet-control-zoom a,
 .leaflet-control-layers-toggle,
 .leaflet-bar a {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    color: #1F3146 !important;
-    border: 1px solid #D2DEEC !important;
-    box-shadow: 0 10px 22px rgba(27, 46, 74, 0.12) !important;
+    background-color: #050b09 !important;
+    color: #d1fae5 !important;
+    border: 1px solid rgba(52, 211, 153, 0.35) !important;
 }
 .leaflet-bar a:hover,
 .leaflet-control-zoom a:hover {
-    background-color: #F5F8FD !important;
-    color: #1778E6 !important;
+    background-color: #0b1f17 !important;
+    color: #a7f3d0 !important;
 }
 .leaflet-control-layers {
-    background: rgba(255, 255, 255, 0.96) !important;
-    color: #1F3146 !important;
-    border: 1px solid #D2DEEC !important;
-    border-radius: 16px !important;
-    box-shadow: 0 20px 42px rgba(27, 46, 74, 0.14) !important;
+    background: rgba(2, 6, 23, 0.92) !important;
+    color: #e5fff3 !important;
+    border: 1px solid rgba(16, 185, 129, 0.35) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
 }
 .leaflet-control-layers-expanded label,
 .leaflet-control-layers-expanded span {
-    color: #556A82 !important;
+    color: #d1fae5 !important;
 }
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-    background: rgba(255, 255, 255, 0.98) !important;
-    color: #1F3146 !important;
-    border: 1px solid #D2DEEC;
-    box-shadow: 0 20px 42px rgba(27, 46, 74, 0.14) !important;
+    background: rgba(3, 7, 18, 0.96) !important;
+    color: #ecfdf5 !important;
+    border: 1px solid rgba(16, 185, 129, 0.40);
 }
 .leaflet-popup-content {
-    color: #1F3146 !important;
+    color: #ecfdf5 !important;
 }
 .leaflet-tooltip {
-    background: rgba(255, 255, 255, 0.97) !important;
-    color: #1F3146 !important;
-    border: 1px solid #B9C8DB !important;
-    border-radius: 10px !important;
-    box-shadow: 0 10px 24px rgba(27, 46, 74, 0.12) !important;
+    background: rgba(5, 11, 9, 0.94) !important;
+    color: #ecfdf5 !important;
+    border: 1px solid rgba(110, 231, 183, 0.45) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28) !important;
 }
 .leaflet-control-attribution {
-    background: rgba(255, 255, 255, 0.88) !important;
-    color: #556A82 !important;
+    background: rgba(2, 6, 23, 0.85) !important;
+    color: #86efac !important;
 }
 .leaflet-control-attribution a {
-    color: #1778E6 !important;
+    color: #6ee7b7 !important;
 }
 </style>
 """
@@ -123,9 +118,9 @@ def build_tooltip(gdf_map):
         aliases=[f"{c}: " for c in tooltip_fields],
         sticky=True,
         style=(
-            "background-color: rgba(255,255,255,0.97); color: #1F3146; "
-            "border: 1px solid #B9C8DB; border-radius: 10px; "
-            "box-shadow: 0 10px 24px rgba(27,46,74,0.12);"
+            "background-color: rgba(3,7,18,0.96); color: #ecfdf5; "
+            "border: 1px solid rgba(110,231,183,0.45); border-radius: 8px; "
+            "box-shadow: 0 8px 24px rgba(0,0,0,0.28);"
         ),
     )
 

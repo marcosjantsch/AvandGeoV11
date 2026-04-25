@@ -24,14 +24,7 @@ def render_mode_tabs() -> str:
         current_mode = MODO_EMPRESA_FAZENDA
         st.session_state["sb_modo_entrada"] = current_mode
 
-    st.markdown(
-        """
-        <div class="avant-sidebar-input-label">
-            Modo de entrada
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("**Modo de entrada**")
     cols = st.columns(len(MODE_TABS))
 
     for col, mode in zip(cols, MODE_TABS):

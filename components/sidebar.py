@@ -16,60 +16,47 @@ def _render_mode_summary():
     modo_entrada = st.session_state.get("sb_modo_entrada") or st.session_state.get("modo_entrada") or "-"
     mode_styles = {
         "Empresa / Fazenda": {
-            "bg": "linear-gradient(135deg, rgba(16, 201, 187, 0.22), rgba(23, 120, 230, 0.20))",
-            "border": "rgba(25, 208, 188, 0.40)",
-            "text": "#EAF8FF",
+            "bg": "rgba(22, 163, 74, 0.14)",
+            "border": "rgba(22, 163, 74, 0.28)",
+            "text": "#166534",
         },
         "Coordenada": {
-            "bg": "linear-gradient(135deg, rgba(23, 120, 230, 0.24), rgba(16, 201, 187, 0.16))",
-            "border": "rgba(23, 120, 230, 0.38)",
-            "text": "#EAF8FF",
+            "bg": "rgba(37, 99, 235, 0.14)",
+            "border": "rgba(37, 99, 235, 0.28)",
+            "text": "#1d4ed8",
         },
         "Arquivo KML/KMZ": {
-            "bg": "linear-gradient(135deg, rgba(240, 77, 99, 0.24), rgba(23, 120, 230, 0.14))",
-            "border": "rgba(240, 77, 99, 0.34)",
-            "text": "#FFF4F6",
+            "bg": "rgba(217, 119, 6, 0.14)",
+            "border": "rgba(217, 119, 6, 0.28)",
+            "text": "#b45309",
         },
     }
     style = mode_styles.get(
         modo_entrada,
-        {
-            "bg": "linear-gradient(135deg, rgba(142, 168, 194, 0.18), rgba(127, 145, 166, 0.10))",
-            "border": "rgba(142, 168, 194, 0.26)",
-            "text": "#EDF5FB",
-        },
+        {"bg": "rgba(120,120,120,0.10)", "border": "rgba(120,120,120,0.18)", "text": "#4b5563"},
     )
 
     st.markdown(
         f"""
         <div style="
-            margin: 4px 0 8px 0;
-            padding: 10px 12px;
-            border-radius: 16px;
-            border: 1px solid rgba(224,239,251,0.18);
-            background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+            margin: 3px 0 4px 0;
+            padding: 7px 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(120,120,120,0.18);
+            background: rgba(255,255,255,0.03);
         ">
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-                <div style="
-                    font-size:11px;
-                    font-weight:700;
-                    letter-spacing:0.08em;
-                    color:#FFFFFF;
-                    text-transform:uppercase;
-                ">
-                    Modo ativo
+                <div style="font-size:11px; font-weight:700; opacity:0.75; text-transform:uppercase;">
+                    Modo Ativo
                 </div>
                 <div style="
-                    padding: 5px 10px;
+                    padding: 3px 9px;
                     border-radius: 999px;
                     font-size: 11px;
                     font-weight: 700;
-                    letter-spacing: 0.05em;
                     background: {style["bg"]};
                     border: 1px solid {style["border"]};
                     color: {style["text"]};
-                    box-shadow: 0 8px 18px rgba(4, 15, 29, 0.18);
                 ">
                     {modo_entrada}
                 </div>
@@ -109,16 +96,7 @@ def render_sidebar(gdf_full, available_images=None):
 
     with st.sidebar:
         st.markdown(
-            """
-            <div class="avant-sidebar-shell">
-                <div class="avant-sidebar-shell-mark"></div>
-                <div class="avant-sidebar-shell-inner">
-                    <div class="avant-sidebar-shell-label">Painel de controle</div>
-                    <div class="avant-sidebar-shell-title">Selecione a opcao</div>
-                    <div class="avant-sidebar-shell-copy">Filtros espaciais e periodo de analise</div>
-                </div>
-            </div>
-            """,
+            '<div style="font-size:15px; font-weight:600; margin-bottom:-8px;">Selecione as opcoes</div>',
             unsafe_allow_html=True,
         )
         _render_mode_summary()

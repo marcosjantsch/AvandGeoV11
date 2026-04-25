@@ -176,16 +176,16 @@ def _render_query_map(
         gdf_map,
         name="Área de consulta",
         style_function=lambda x: {
-            "color": "#10C9BB",
+            "color": "#34d399",
             "weight": 2.1,
-            "fillColor": "#1778E6",
-            "fillOpacity": 0.09,
+            "fillColor": "#22c55e",
+            "fillOpacity": 0.07,
         },
         highlight_function=lambda x: {
-            "color": "#1778E6",
+            "color": "#a7f3d0",
             "weight": 2.8,
-            "fillColor": "#10C9BB",
-            "fillOpacity": 0.15,
+            "fillColor": "#4ade80",
+            "fillOpacity": 0.12,
         },
         tooltip=build_tooltip(gdf_map),
     ).add_to(m)
@@ -199,17 +199,17 @@ def _render_query_map(
                 gdf_buffer,
                 name=f"ROI ({filtro.get('buffer_m', 0)} m)",
                 style_function=lambda x: {
-                    "color": "#F04D63",
+                    "color": "#6ee7b7",
                     "weight": 1.8,
-                    "fillColor": "#10C9BB",
-                    "fillOpacity": 0.04,
+                    "fillColor": "#10b981",
+                    "fillOpacity": 0.03,
                     "dashArray": "5, 5",
                 },
                 highlight_function=lambda x: {
-                    "color": "#1778E6",
+                    "color": "#bbf7d0",
                     "weight": 2.2,
-                    "fillColor": "#F04D63",
-                    "fillOpacity": 0.08,
+                    "fillColor": "#34d399",
+                    "fillOpacity": 0.06,
                 },
             ).add_to(m)
         except Exception:
